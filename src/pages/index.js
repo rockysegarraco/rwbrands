@@ -1,9 +1,16 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { fetchPost } from '@/lib/api';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({allPosts}) {
+  const heroPost = allPosts[0].fields
+
+  console.log('====================================');
+  console.log(heroPost);
+  console.log('====================================');
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -115,4 +122,12 @@ export default function Home() {
       </div>
     </main>
   )
+}
+
+export async function getStaticProps() {
+  const { posts } = await fetchPost();
+  return {
+    props: {allPosts: posts },
+    revalidate: 60,
+  };
 }
