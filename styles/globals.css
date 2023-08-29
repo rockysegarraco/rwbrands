@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "kudryashev-d-contrast", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sticky-thc {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  /* font-size: 20px; */
+  /* background: #efefef; */
+  color: white;
+  text-align: center;
+}
+
+.react-slideshow-container .default-nav:first-of-type {
+  display: none;
+}
+
+.react-slideshow-container .default-nav:last-of-type {
+  display: none;
+}
