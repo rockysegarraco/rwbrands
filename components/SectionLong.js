@@ -14,9 +14,9 @@ export default function Example() {
             Need some <span className="italic">guidance</span>?
           </h2>
           <h1 className="mt-2 text-xl font-bold text-dark lg:text-2xl uppercase">
-            "We celebrate love, happiness, + moments of joy with our family of
+            {`"We celebrate love, happiness, + moments of joy with our family of
             clients, through authentic, meaningful, customer-centered
-            interactions"
+            interactions"`}
           </h1>
           <p className="mt-6 leading-7 text-dark">
             Drop us a line and let us know how we can help – hello@rw-brands.com
