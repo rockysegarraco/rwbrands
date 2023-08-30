@@ -141,9 +141,9 @@ export default function Home({ allPosts }) {
                 Need some <span className="italic">guidance</span>?
               </h2>
               <h1 className="text-xl text-dark sm:text-3xl leading-[1.5rem] lg:leading-[2.5rem]">
-                "WE CELEBRATE LOVE, HAPPINESS, + MOMENTS OF JOY WITH OUR FAMILY
-                OF CLIENTS, THROUGH AUTHENTIC, MEANINGFUL, CUSTOMER-CENTERED
-                INTERACTIONS"
+                &quot;WE CELEBRATE LOVE, HAPPINESS, + MOMENTS OF JOY WITH OUR
+                FAMILY OF CLIENTS, THROUGH AUTHENTIC, MEANINGFUL,
+                CUSTOMER-CENTERED INTERACTIONS&quot;
               </h1>
               <p className="mt-6 leading-7 text-dark">
                 Drop us a line and let us know how we can help –
