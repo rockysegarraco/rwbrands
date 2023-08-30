@@ -95,7 +95,7 @@ export default function Home({ allPosts }) {
         </div>
         <div className="bg-white">
           <TitleSection />
-          <div className="mx-auto max-w-full grid grid-cols-1 lg:grid-cols-3 p-8 gap-8 border-white">
+          <div className="mx-auto max-w-full grid grid-cols-1 lg:grid-cols-3 p-10 gap-10 border-white">
             <div>
               <Card
                 title="Cypress Grove"

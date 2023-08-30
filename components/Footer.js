@@ -53,7 +53,7 @@ const navigation = {
 
 export default function Example() {
   return (
-    <footer className="bg-white border-t mt-16">
+    <footer className="bg-white border-t-0 lg:border-t mt-0 lg:mt-16">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-16 lg:px-8">
         <div className="flex justify-center space-x-10 mb-8">
           <Link href="/" className="-m-1.5 p-1.5">
