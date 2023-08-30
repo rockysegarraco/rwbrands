@@ -23,7 +23,7 @@ export default function Home({ allPosts }) {
       <main>
         <Header />
         <Slides />
-        <div className="relative border-t-2 border-white">
+        <div className="relative bg-[#eee7df] mb-1 lg:mb-16">
           <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2">
             <img
               className="h-full w-full object-cover"
@@ -36,7 +36,7 @@ export default function Home({ allPosts }) {
               <h2 className="mb-8 uppercase tracking-wider">
                 weddings, corporate + social events
               </h2>
-              <h1 className="mt-2 text-3xl font-bold text-dark sm:text-6xl uppercase">
+              <h1 className="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]">
                 ...Passion
               </h1>
               <p className="mt-6 leading-7 text-dark">
@@ -60,7 +60,7 @@ export default function Home({ allPosts }) {
             </div>
           </div>
         </div>
-        <div className="relative bg-[#eee7df] border-white">
+        <div className="relative bg-[#eee7df]">
           <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
             <img
               className="h-full w-full object-cover"
@@ -95,7 +95,7 @@ export default function Home({ allPosts }) {
         </div>
         <div className="bg-white">
           <TitleSection />
-          <div className="mx-auto max-w-full grid grid-cols-1 lg:grid-cols-3 p-16 gap-10 border-white">
+          <div className="mx-auto max-w-full grid grid-cols-1 lg:grid-cols-3 p-8 gap-8 border-white">
             <div>
               <Card
                 title="Cypress Grove"
@@ -127,7 +127,39 @@ export default function Home({ allPosts }) {
             </div>
           </div>
         </div>
-        <SectionLong />
+        <div className="relative bg-[#eee7df] mb-0 lg:mb-16">
+          <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2">
+            <img
+              className="h-full w-full object-cover"
+              src="https://uj8.ad7.myftpupload.com/wp-content/uploads/2023/06/Amanda-and-Gerardo-Wedding-Party-210-scaled.jpg"
+              alt=""
+            />
+          </div>
+          <div className="relative mx-auto max-w-8xl py-10 sm:py-32 lg:px-8 lg:py-40">
+            <div className="pl-8 pr-8 md:mr-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-16 lg:pr-16 xl:pl-32">
+              <h2 className="mb-8 font-bold uppercase tracking-wider">
+                Need some <span className="italic">guidance</span>?
+              </h2>
+              <h1 className="text-xl text-dark sm:text-3xl leading-[1.5rem] lg:leading-[2.5rem]">
+                "WE CELEBRATE LOVE, HAPPINESS, + MOMENTS OF JOY WITH OUR FAMILY
+                OF CLIENTS, THROUGH AUTHENTIC, MEANINGFUL, CUSTOMER-CENTERED
+                INTERACTIONS"
+              </h1>
+              <p className="mt-6 leading-7 text-dark">
+                Drop us a line and let us know how we can help –
+                hello@rw-brands.com
+              </p>
+              <div className="mt-8">
+                <a
+                  href="#"
+                  className="inline-flex underline underline-offset-8 uppercase"
+                >
+                  CONNECT
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <Footer />
     </>
