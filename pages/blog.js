@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { fetchPost } from "/lib/api";
 
-import Header from "/components/Header";
+import Header from "/components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +16,7 @@ export default function Home({ allPosts }) {
 
   return (
     <>
-      <Header />
+      <Nav />
     </>
   );
 }
