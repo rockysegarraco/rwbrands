@@ -15,9 +15,7 @@ export default function Home({ allPosts }) {
     <>
       <Layout>
         {/* SLIDER */}
-        <SectionSlider
-          sliderItems={fadeImages}
-        />
+        <SectionSlider sliderItems={fadeImages} />
         {/* SECTION */}
         <SectionModLeft
           className="relative bg-[#eee7df] mb-1 lg:mb-16"
@@ -41,18 +39,14 @@ export default function Home({ allPosts }) {
         <SectionModRight
           className="relative bg-[#eee7df] mb-1 lg:mb-16"
           tagline="FROM OUR BLOG"
-          title="A Colorful Summer Floral Makeover At Luxmore Featured on MunaLuchi Bride"
+          title={heroPost.title}
           titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]"
-          ImageUrl="https://uj8.ad7.myftpupload.com/wp-content/uploads/2022/11/Colorful-Summer-Floral-Inspiration-Jennifer-Nicole-Photography-100.jpeg"
+          ImageUrl={heroPost.coverImage.url}
           ButtonLink="/"
           ButtonTitle="read more"
           slug={heroPost.slug}
         >
-          Styled Shoots Across America + Intrigued Events teamed up to give you
-          a vibrant, colorful summer floral inspiration that’ll make you want to
-          bust out your gardening gloves and get to work! We’re delighted that
-          they’ve decided to host their floral workshop here, giving Luxmore a
-          floral transformation!
+          {heroPost.excerpt}
         </SectionModRight>
         {/* SECTION */}
         <div className="bg-white">
