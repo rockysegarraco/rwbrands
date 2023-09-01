@@ -43,7 +43,7 @@ export default function Home({ allPosts }) {
           tagline="FROM OUR BLOG"
           title="A Colorful Summer Floral Makeover At Luxmore Featured on MunaLuchi Bride"
           titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]"
-          ImageUrl="https://uj8.ad7.myftpupload.com/wp-content/uploads/2022/11/Colorful-Summer-Floral-Inspiration-Jennifer-Nicole-Photography-100.jpeg"
+          imageUrl={heroPost.coverImage?.fields?.file?.url}
           ButtonLink="/"
           ButtonTitle="read more"
           slug={heroPost.slug}
