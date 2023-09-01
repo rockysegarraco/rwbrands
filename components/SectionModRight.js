@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export default function SectionModLeft(props) {
-  const { children, slug } = props; // Destructure 'children' from 'props'
+  const { children, slug, imageUrl } = props; // Destructure 'children' from 'props'
 
   return (
     <div className={[props.className]}>
       <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
         <img
           className="h-full w-full object-cover"
-          src={props.ImageUrl}
+          src={imageUrl}
           alt=""
         />
       </div>

@@ -41,7 +41,7 @@ export default function Home({ allPosts }) {
           tagline="FROM OUR BLOG"
           title={heroPost.title}
           titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]"
-          ImageUrl={heroPost.coverImage.url}
+          imageUrl={heroPost.coverImage?.fields?.file?.url}
           ButtonLink="/"
           ButtonTitle="read more"
           slug={heroPost.slug}
