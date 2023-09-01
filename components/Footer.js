@@ -14,7 +14,7 @@ const navigation = {
       href: "https://www.facebook.com/RWEvents",
       icon: (props) => (
         <svg
-          class="w-6 h-6 text-dark fill-current"
+          className="w-6 h-6 text-dark fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -40,7 +40,7 @@ const navigation = {
       href: "https://www.pinterest.com/RWevents/",
       icon: (props) => (
         <svg
-          class="w-6 h-6 text-dark fill-current"
+          className="w-6 h-6 text-dark fill-current"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

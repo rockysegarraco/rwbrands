@@ -2,7 +2,8 @@ import React from "react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const SectionSlider = (props) => {
+const SectionSlider = ({ sliderItems }) => {
+
   const settings = {
     infinite: true,
     slidesToShow: 3,
@@ -16,38 +17,20 @@ const SectionSlider = (props) => {
   };
 
   return (
-    <div className="h-screen bg-slate-900">
-      <Fade>
-        <div className="each-slide-effect h-screen">
-          <div
-            className="bg-center"
-            style={{
-              backgroundImage: "{props.PictureOne}",
-            }}
-          >
-            <span className="text-4xl"></span>
+    <div className="h-screen bg-slate-900 slide-container">
+      <Fade >
+        {sliderItems.map((item, index) => (
+          <div key={index} className="each-slide-effect each-fade h-screen">
+            <div
+              className="bg-center"
+              style={{
+                backgroundImage: item.url,
+              }}
+            >
+              <span className="text-4xl"></span>
+            </div>
           </div>
-        </div>
-        <div className="each-slide-effect h-screen">
-          <div
-            className="bg-center"
-            style={{
-              backgroundImage: "{props.PictureTwo}",
-            }}
-          >
-            <span className="text-4xl"></span>
-          </div>
-        </div>
-        <div className="each-slide-effect h-screen">
-          <div
-            className="bg-center"
-            style={{
-              backgroundImage: "{props.PictureThree}",
-            }}
-          >
-            <span className="text-4xl"></span>
-          </div>
-        </div>
+        ))}
       </Fade>
     </div>
   );

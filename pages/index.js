@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import { fetchPost } from "/lib/api";
 
 import Layout from "/components/Layout";
@@ -8,24 +6,17 @@ import TitleSection from "/components/TitleSection";
 import Card from "/components/Card";
 import SectionModLeft from "/components/SectionModLeft";
 import SectionModRight from "/components/SectionModRight";
-
-const inter = Inter({ subsets: ["latin"] });
+import { fadeImages } from "../lib/helper";
 
 export default function Home({ allPosts }) {
   const heroPost = allPosts[0].fields;
-
-  console.log("====================================");
-  console.log(heroPost);
-  console.log("====================================");
 
   return (
     <>
       <Layout>
         {/* SLIDER */}
         <SectionSlider
-          PictureOne="url(https://uj8.ad7.myftpupload.com/wp-content/uploads/2020/05/luxmore-grande-wedding-gian-carlo-photography-312-1-scaled.jpg)"
-          PictureTwo="url(https://uj8.ad7.myftpupload.com/wp-content/uploads/2020/05/luxmore-grande-wedding-gian-carlo-photography-312-1-scaled.jpg)"
-          PictureThree="url(https://uj8.ad7.myftpupload.com/wp-content/uploads/2020/05/luxmore-grande-wedding-gian-carlo-photography-124-1-scaled.jpg)"
+          sliderItems={fadeImages}
         />
         {/* SECTION */}
         <SectionModLeft
