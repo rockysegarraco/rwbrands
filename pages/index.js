@@ -46,6 +46,7 @@ export default function Home({ allPosts }) {
           ImageUrl="https://uj8.ad7.myftpupload.com/wp-content/uploads/2022/11/Colorful-Summer-Floral-Inspiration-Jennifer-Nicole-Photography-100.jpeg"
           ButtonLink="/"
           ButtonTitle="read more"
+          slug={heroPost.slug}
         >
           Styled Shoots Across America + Intrigued Events teamed up to give you
           a vibrant, colorful summer floral inspiration that’ll make you want to

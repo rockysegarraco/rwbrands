@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 export default function SectionModLeft(props) {
-  const { children } = props; // Destructure 'children' from 'props'
+  const { children, slug } = props; // Destructure 'children' from 'props'
+
   return (
     <div className={[props.className]}>
       <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
@@ -17,12 +20,12 @@ export default function SectionModLeft(props) {
           <h1 className={[props.titleSize]}>{props.title}</h1>
           <p className="mt-6 leading-7 text-dark">{children}</p>
           <div className="mt-8">
-            <a
-              href={props.ButtonLink}
+            <Link
+              href={`/${slug}`}
               className="inline-flex underline underline-offset-8 uppercase"
             >
               {props.ButtonTitle}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
