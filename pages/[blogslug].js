@@ -16,8 +16,8 @@ const BlogDetails = ({posts}) => {
 
 export default BlogDetails
 
-export async function getStaticProps() {
-    const posts = await fetchPostWithSlug();
+export async function getStaticProps({params}) {
+    const posts = await fetchPostWithSlug(params.blogslug);
     return {
       props: { posts: posts?.fields },
       revalidate: 60,
