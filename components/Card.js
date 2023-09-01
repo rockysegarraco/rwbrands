@@ -8,7 +8,9 @@ export default function Card(props) {
         </a>
         <div className="py-10">
           <a href="#">
-            <h5 className="mb-2 text-3xl text-dark uppercase">{props.title}</h5>
+            <h5 className="mb-2 text-2xl lg:text-3xl text-dark uppercase">
+              {props.title}
+            </h5>
           </a>
           <p className="mb-8 font-normal text-dark">{children}</p>
           <a
