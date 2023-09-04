@@ -20,13 +20,12 @@ export default function Home({ allPosts }) {
         <SectionModLeft
           className="relative bg-[#eee7df] mb-1 lg:mb-16"
           tagline="weddings, corporate + social events"
-          title="A Colorful Summer Floral Makeover At Luxmore Featured on MunaLuchi Bride"
-          titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]"
+          title="We’re a brand passionate about weddings, corporate + social events of all types…"
+          titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3.5rem]"
           ImageUrl="https://uj8.ad7.myftpupload.com/wp-content/uploads/2023/06/KIMGOPHOTOGRAPHY_0059.jpg"
           ButtonLink="/"
           ButtonTitle="learn more"
         >
-          We’re a brand passionate about weddings, corporate + social events…
           Committed to styling and designing events throughout the greater
           Orlando and Central Florida area.
           <br />
@@ -40,7 +39,7 @@ export default function Home({ allPosts }) {
           className="relative bg-[#eee7df] mb-1 lg:mb-16"
           tagline="FROM OUR BLOG"
           title={heroPost.title}
-          titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3rem]"
+          titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3.5rem]"
           imageUrl={heroPost.coverImage?.fields?.file?.url}
           ButtonLink="/"
           ButtonTitle="read more"

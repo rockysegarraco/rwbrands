@@ -2,7 +2,7 @@ export default function SectionModLeft(props) {
   const { children } = props; // Destructure 'children' from 'props'
   return (
     <div className={[props.className]}>
-      <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2">
+      <div className="p-4 lg:p-16 bg-white relative h-80 overflow-hidden md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2 md:block hidden">
         <img
           className="h-full w-full object-cover"
           src={props.ImageUrl}
