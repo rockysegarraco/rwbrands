@@ -12,7 +12,7 @@ const SectionSlider = ({ sliderItems }) => {
         {sliderItems.map((item, index) => (
           <div key={index} className="each-fade">
             <div className="bg-center">
-              <img src={item.url} alt="" />
+              <img className="w-full" src={item.url} alt="" />
               <span className="text-4xl"></span>
             </div>
           </div>

@@ -6,7 +6,7 @@ const Example = () => {
       <div className="flex space-x-6">
         <a
           href="https://www.facebook.com/RWEvents"
-          className="text-gray-500 hover:text-gray-400"
+          className="text-dark hover:text-gray-400"
         >
           <span className="sr-only">Facebook</span>
           <svg
@@ -24,7 +24,7 @@ const Example = () => {
         </a>
         <a
           href="https://www.instagram.com/rwevents/"
-          className="text-gray-500 hover:text-gray-400"
+          className="text-dark hover:text-gray-400"
         >
           <span className="sr-only">Instagram</span>
           <svg
@@ -42,7 +42,7 @@ const Example = () => {
         </a>
         <a
           href="https://www.pinterest.com/RWevents/"
-          className="text-gray-500 hover:text-gray-400"
+          className="text-dark hover:text-gray-400"
         >
           <span className="sr-only">Pinterest</span>
           <svg

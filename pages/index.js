@@ -18,7 +18,7 @@ export default function Home({ allPosts }) {
         <SectionSlider sliderItems={fadeImages} />
         {/* SECTION */}
         <SectionModLeft
-          className="relative bg-[#eee7df] mb-1 lg:mb-16"
+          className="relative bg-[#eee7df] lg:mt-0 md:mt-4 mb-0 md:mb-4 lg:mb-16"
           tagline="weddings, corporate + social events"
           title="We’re a brand passionate about weddings, corporate + social events of all types…"
           titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3.5rem]"
@@ -36,7 +36,7 @@ export default function Home({ allPosts }) {
         </SectionModLeft>
         {/* SECTION */}
         <SectionModRight
-          className="relative bg-[#eee7df] mb-1 lg:mb-16"
+          className="relative bg-[#eee7df] lg:mb-16"
           tagline="FROM OUR BLOG"
           title={heroPost.title}
           titleSize="text-3xl text-dark sm:text-5xl leading-[2rem] lg:leading-[3.5rem]"

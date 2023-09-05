@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 import SocialIcons from "/components/SocialIcons";
 import {
@@ -52,14 +53,14 @@ export default function Example() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">RW Brands</span>
             <img
               className="h-6 w-auto"
               src="https://uj8.ad7.myftpupload.com/wp-content/uploads/2023/08/rwlogo.png"
               alt=""
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -116,25 +117,25 @@ export default function Example() {
           </Popover>
           {/* SECTION */}
           <a
-            href="#"
+            href="/rwstyle"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Inventory
           </a>
           <a
-            href="#"
+            href="/theintro"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             The Intro
           </a>
           <a
-            href="#"
+            href="/blog"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Blog
           </a>
           <a
-            href="#"
+            href="/contact"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Connect
