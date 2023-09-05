@@ -10,7 +10,13 @@ const BlogDetails = ({ posts }) => {
 
   return (
     <Layout>
-      <div>detail page</div>
+      <div className="mx-auto max-w-3xl bg-dark lg:mt-24 p-8">
+        <div className="text-center">
+          <h1 className="text-5xl mb-8 leading-[3.5rem]">{posts.title}</h1>
+          <div>{posts.date}</div>
+        </div>
+        <img className="py-10" src={posts.coverImage} />
+      </div>
     </Layout>
   );
 };

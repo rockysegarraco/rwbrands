@@ -13,7 +13,7 @@ export default function Example() {
   return (
     <>
       <Layout>
-        <SectionSlider sliderItems={inventoryImages} />
+        <SectionSlider sliderItems={inventoryImages} title="Inventory" />
         <div className="relative bg-white mt-2">
           <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
             <div className="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
