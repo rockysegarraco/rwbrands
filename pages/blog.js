@@ -1,47 +1,82 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { fetchPost } from "/lib/api";
+import { useState } from "react";
 import Link from "next/link";
 
 import Nav from "/components/Nav";
 import Pagination from "/components/Pagination";
+import DateComponent from "/components/date";
+import { NUMBER_OF_BLOG_TO_SHOW } from "../lib/helper";
+import { fetchPostWithPagination } from "../lib/api";
 
-const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ allPosts }) {
-  const heroPost = allPosts[0].fields;
+export default function Home({ allPosts, total }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postData, setPostData] = useState(allPosts);
+  const [totalLength, setTotalLength] = useState(NUMBER_OF_BLOG_TO_SHOW);
 
-  console.log("====================================");
-  console.log(heroPost);
-  console.log("====================================");
+  const handleNext = async (e) => {
+    e.preventDefault();
+    if (totalLength != total) {
+      console.log("its calling")
+      const { posts } = await fetchPostWithPagination(
+        NUMBER_OF_BLOG_TO_SHOW,
+        totalLength
+      );
+      setTotalLength(totalLength + posts.length);
+      setCurrentPage(currentPage + 1);
+      setPostData(posts);
+    }
+  };
+
+  const handlePrev = async (e) => {
+    e.preventDefault();
+    if (currentPage != 1) {
+      const totalSkip = currentPage == 2 ? 0 : totalLength - postData.length;
+      const { posts } = await fetchPostWithPagination(
+        NUMBER_OF_BLOG_TO_SHOW,
+        totalSkip
+      );
+      setTotalLength(totalLength - postData.length);
+      setCurrentPage(currentPage - 1);
+      setPostData(posts);
+    }
+  };
 
   return (
     <>
       <Nav />
       <div className="text-dark text-4xl lg:text-4xl p-8 text-center">Blog</div>
       <div className="mx-auto mt-0 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 sm:grid-cols-2 p-8">
-        <Link href="/">
-          <div class="rounded overflow-hidden shadow-lg hover:shadow-xl">
+        {postData.map((item, i) => {
+          const fields = item.fields;
+        return(
+          <Link key={i} href="/">
+          <div className="rounded overflow-hidden shadow-lg hover:shadow-xl">
             <img
-              class="w-full"
-              src="https://rw-brands.com/wp-content/uploads/2019/01/Luxmore_grande_ceremony-5.jpg"
+              className="w-full"
+              src={fields.coverImage?.fields?.file?.url}
               alt="Sunset in the mountains"
             />
-            <div class="p-8">
-              <div className="text-sm mb-4">July 21, 2023</div>
-              <div class="font-bold text-xl mb-4">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+            <div className="p-8">
+              <div className="font-bold text-xl mb-4">{fields.title}</div>
+              <p className="text-gray-700 text-base">
+               {fields.desc}
               </p>
+              <div className="text-sm mb-4">
+              <DateComponent dateString={fields.date} />
+              </div>
             </div>
           </div>
         </Link>
+        )})}
       </div>
       <div className="mx-auto max-w-7xl">
-        <Pagination />
+        <Pagination
+          total={total}
+          currentPage={currentPage}
+          numberOfResult={NUMBER_OF_BLOG_TO_SHOW}
+          handleNext={handleNext}
+          handlePrev={handlePrev}
+        />
       </div>
 
       <style>{"body { background-color: #f5f5f7; }"}</style>
@@ -50,9 +85,9 @@ export default function Home({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const { posts } = await fetchPost();
+  const { posts, total } = await fetchPostWithPagination(NUMBER_OF_BLOG_TO_SHOW, 0);
   return {
-    props: { allPosts: posts },
+    props: { allPosts: posts, total },
     revalidate: 60,
   };
 }
