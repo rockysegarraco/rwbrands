@@ -15,7 +15,7 @@ export default function Home({ allPosts }) {
     <>
       <Layout>
         {/* SLIDER */}
-        <SectionSlider sliderItems={fadeImages} />
+        <SectionSlider sliderItems={fadeImages} title="" />
         {/* SECTION */}
         <SectionModLeft
           className="relative bg-[#eee7df] lg:mt-0 md:mt-4 mb-0 md:mb-4 lg:mb-16"
