@@ -76,7 +76,11 @@ export default function Home({ allPosts }) {
               <hr />
             </div>
             <div>
-              <Card title="RW Style" ImageUrl="img/rwstyle.jpg" ButtonLink="/">
+              <Card
+                title="Miscellaneous Market"
+                ImageUrl="img/rwstyle.jpg"
+                ButtonLink="/"
+              >
                 Is the perfect southern backdrop for wedding ceremonies +
                 receptions. Offering a lakeside gazebo, dinner under the market
                 lights, and...
