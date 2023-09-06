@@ -21,13 +21,13 @@ import {
 const products = [
   {
     name: "Luxmore Grande Estate",
-    description: "Get a better understanding of your traffic",
-    href: "#",
+    description: "(venue ownership)",
+    href: "/luxmore",
     icon: ChartPieIcon,
   },
   {
     name: "Cypress Grove",
-    description: "Speak directly to your customers",
+    description: "(venue management)",
     href: "#",
     icon: CursorArrowRaysIcon,
   },
