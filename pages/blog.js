@@ -16,7 +16,6 @@ export default function Home({ allPosts, total }) {
   const handleNext = async (e) => {
     e.preventDefault();
     if (totalLength != total) {
-      console.log("its calling")
       const { posts } = await fetchPostWithPagination(
         NUMBER_OF_BLOG_TO_SHOW,
         totalLength
@@ -48,26 +47,27 @@ export default function Home({ allPosts, total }) {
       <div className="mx-auto mt-0 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-3 sm:grid-cols-2 p-8">
         {postData.map((item, i) => {
           const fields = item.fields;
-        return(
-          <Link key={i} href="/">
-          <div className="rounded overflow-hidden shadow-lg hover:shadow-xl">
-            <img
-              className="w-full"
-              src={fields.coverImage?.fields?.file?.url}
-              alt="Sunset in the mountains"
-            />
-            <div className="p-8">
-              <div className="font-bold text-xl mb-4">{fields.title}</div>
-              <p className="text-gray-700 text-base">
-               {fields.desc}
-              </p>
-              <div className="text-sm mb-4">
-              <DateComponent dateString={fields.date} />
+          return (
+            <Link key={i} href={`/${fields.slug}`}>
+              <div className="rounded overflow-hidden shadow-lg hover:shadow-xl">
+                <img
+                  className="w-full"
+                  src={fields.coverImage?.fields?.file?.url}
+                  alt="Sunset in the mountains"
+                />
+                <div className="p-8">
+                  <div className="font-bold text-xl mb-4">{fields.title}</div>
+                  <p className="text-gray-700 text-base">
+                    {fields.desc}
+                  </p>
+                  <div className="text-sm mb-4">
+                    <DateComponent dateString={fields.date} />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Link>
-        )})}
+            </Link>
+          )
+        })}
       </div>
       <div className="mx-auto max-w-7xl">
         <Pagination
