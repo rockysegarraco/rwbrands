@@ -5,6 +5,7 @@ import { fetchPost, fetchPostWithSlug } from "../lib/api";
 import Layout from "/components/Layout";
 import PageNotFound from "../components/pagenotfound";
 import DateComponent from "../components/date";
+import PostBody from "../components/Postbody";
 
 const BlogDetails = ({ posts }) => {
 
@@ -22,6 +23,7 @@ const BlogDetails = ({ posts }) => {
           <DateComponent dateString={posts.date} />
         </div>
         <img className="py-10" src={posts.coverImage?.fields?.file?.url} alt="" />
+        <PostBody content={posts.content} />
       </div>
     </Layout>
   );
