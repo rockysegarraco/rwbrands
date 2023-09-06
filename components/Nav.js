@@ -116,30 +116,30 @@ export default function Example() {
             </Transition>
           </Popover>
           {/* SECTION */}
-          <a
+          <Link
             href="/rwstyle"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Inventory
-          </a>
-          <a
+          </Link>
+          <Link
             href="/theintro"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             The Intro
-          </a>
-          <a
+          </Link>
+          <Link
             href="/blog"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="text-sm font-semibold leading-6 text-gray-900 uppercase"
           >
             Connect
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <SocialIcons />
